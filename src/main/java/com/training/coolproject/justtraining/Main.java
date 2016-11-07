@@ -9,4 +9,6 @@ public class Main {
     void doAction() {
 
     }
+
+    void x() {}
 }
