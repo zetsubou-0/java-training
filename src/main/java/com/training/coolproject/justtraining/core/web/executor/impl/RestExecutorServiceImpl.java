@@ -1,5 +1,7 @@
-package com.training.coolproject.justtraining.core.web.executor;
+package com.training.coolproject.justtraining.core.web.executor.impl;
 
+import com.training.coolproject.justtraining.core.web.executor.RestExecutorService;
+import com.training.coolproject.justtraining.core.web.executor.config.ServerConfig;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.Consts;
@@ -34,7 +36,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public class RestExecutor implements Closeable {
+public class RestExecutorServiceImpl implements Closeable, RestExecutorService {
 
     private CloseableHttpClient httpClient;
 
@@ -44,7 +46,7 @@ public class RestExecutor implements Closeable {
 
     private ServerConfig properties;
 
-    public RestExecutor(ServerConfig properties) {
+    public RestExecutorServiceImpl(ServerConfig properties) {
         if (properties == null) {
             return;
         }
@@ -96,7 +98,7 @@ public class RestExecutor implements Closeable {
         }
     }
 
-    public int executeDelete(String url) throws IOException {
+    public int executeDelete(final String url) throws IOException {
         HttpDelete httpPost = new HttpDelete(url);
 
         try (CloseableHttpResponse response = httpClient.execute(targetHost, httpPost, context)) {

@@ -1,4 +1,4 @@
-package com.training.coolproject.justtraining.core.web.executor;
+package com.training.coolproject.justtraining.core.web.executor.config;
 
 public class ServerConfig {
 
