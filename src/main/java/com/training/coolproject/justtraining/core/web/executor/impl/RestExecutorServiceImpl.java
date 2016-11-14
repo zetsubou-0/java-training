@@ -36,7 +36,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public class RestExecutorServiceImpl implements Closeable, RestExecutorService {
+public class RestExecutorServiceImpl implements RestExecutorService {
 
     private CloseableHttpClient httpClient;
 

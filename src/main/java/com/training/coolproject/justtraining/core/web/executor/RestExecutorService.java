@@ -1,12 +1,13 @@
 package com.training.coolproject.justtraining.core.web.executor;
 
+import java.io.Closeable;
 import java.io.IOException;
 import java.util.Map;
 
 /**
  * Предоставляет функционал работы с Web через GET/POST/DELETE запросы
  */
-public interface RestExecutorService {
+public interface RestExecutorService extends Closeable {
 
     /**
      * Выполняет GET запрос по задонному URL, возвращает ответ в виде строки,
