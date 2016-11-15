@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="360.0" prefWidth="97.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="9.0" layoutY="14.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" text="\$" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button layoutX="9.0" layoutY="92.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="90.0" text="Авто" />
+            <Button layoutX="24.0" layoutY="187.0" mnemonicParsing="false" text="Button" />
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <AnchorPane prefHeight="306.0" prefWidth="101.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="25.0" layoutY="34.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="25.0" layoutY="107.0" mnemonicParsing="false" text="Button" />
+            <Button layoutX="25.0" layoutY="173.0" mnemonicParsing="false" text="Button" />
+         </children>
+      </AnchorPane>
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="54.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
