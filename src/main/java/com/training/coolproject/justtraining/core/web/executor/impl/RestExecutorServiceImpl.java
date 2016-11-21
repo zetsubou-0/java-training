@@ -1,6 +1,7 @@
 package com.training.coolproject.justtraining.core.web.executor.impl;
 
 import com.training.coolproject.justtraining.core.web.executor.RestExecutorService;
+import com.training.coolproject.justtraining.core.web.executor.config.Scheme;
 import com.training.coolproject.justtraining.core.web.executor.config.ServerConfig;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -26,7 +27,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 
-import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
@@ -51,6 +51,9 @@ public class RestExecutorServiceImpl implements RestExecutorService {
             return;
         }
         this.properties = properties;
+        if (Scheme.HTTPS.getName().equals(properties.getScheme())) {
+            System.setProperty("jsse.enableSNIExtension", "false");
+        }
         httpClient = HttpClients.createDefault();
         targetHost = new HttpHost(properties.getHost(), properties.getPort(), properties.getScheme());
         CredentialsProvider credentialsProvider = new BasicCredentialsProvider();

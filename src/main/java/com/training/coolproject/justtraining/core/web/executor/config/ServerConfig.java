@@ -26,6 +26,7 @@ public class ServerConfig {
         this.host = host;
         this.port = port == 0 ? DEFAULT_PORT : port;
         this.scheme = scheme.getName();
+        authentication = authentication == null ? Authentication.defaultAuthentication() : authentication;
         userName = authentication.getUserName();
         userPassword = authentication.getPassword();
     }
