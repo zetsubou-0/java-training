@@ -13,7 +13,7 @@ public class MainWindow extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/training/coolproject/justtraining/ui/fxml/mainWindow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/mainWindow.fxml"));
         primaryStage.setTitle("Main Window");
         primaryStage.setScene(new Scene(root, 400, 600));
         primaryStage.setMinHeight(400);
